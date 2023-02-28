@@ -1,0 +1,19 @@
+apt install neovim python nodejs
+pip install pynvim
+npm install neovim -g
+* Install plugin:
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+* Setup init.vim
+mv folder to .config
+rm plug
+:PlugInstall
+* Setup fonts
+pkg install lsd
+
+cd && cd .termux && curl -fLo font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip && mkdir fonts && mv font.zip fonts &&  cd fonts && unzip font.zip && mv "Hack Regular Nerd Font Complete.ttf" .. && cd .. && mv "Hack Regular Nerd Font Complete.ttf" font.ttf && rm -rf fonts
+
+echo alias ls=lsd >> /data/data/com.termux/files/usr/etc/bash.bashrc
+
+termux-reload-settings
+* Done
